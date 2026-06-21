@@ -67,12 +67,12 @@ export function HeroSection() {
                   className="w-full sm:w-auto"
                   asChild
                 >
-                  <Link
-                    href="#contact"
+                  <a
+                    href={`mailto:${siteConfig.email}`}
                     data-cursor="pointer"
                   >
                     <span className="link-underline">Contact Me</span>
-                  </Link>
+                  </a>
                 </Button>
               </MagneticButton>
             </motion.div>

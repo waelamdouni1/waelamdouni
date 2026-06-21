@@ -3,6 +3,7 @@ import { SiteFooter } from "@/components/layout/site-footer";
 import { AboutSection } from "@/components/sections/about-section";
 import { HeroSection } from "@/components/sections/hero-section";
 import { ProcessSection } from "@/components/sections/process-section";
+import { ClosingCta } from "@/components/sections/closing-cta";
 import { ProjectsGrid } from "@/components/projects/projects-grid";
 import { getAllProjects } from "@/lib/projects";
 
@@ -16,6 +17,7 @@ export default function HomePage() {
       <ProjectsGrid projects={projects} />
       <AboutSection />
       <ProcessSection />
+      <ClosingCta />
       <SiteFooter />
     </main>
   );

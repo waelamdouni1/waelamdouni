@@ -104,7 +104,7 @@ export function Navbar() {
 
           <MagneticButton strength={0.2}>
             <a
-              href="https://drive.google.com/file/d/1j8Fc0lIFQwAdkAuajPeSKb_s5s4jxWag/view?usp=drive_link"
+              href="https://drive.google.com/file/d/1l7qyR-rCjOegd-LwG6NSH6gpjrDU7nMQ/view?usp=drive_link"
               target="_blank"
               rel="noopener noreferrer"
               className={cn(

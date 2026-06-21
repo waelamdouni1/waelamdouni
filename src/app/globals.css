@@ -33,9 +33,9 @@
   --muted: rgba(255, 255, 255, 0.08);
   --muted-foreground: rgba(255, 255, 255, 0.6);
   --border: rgba(255, 255, 255, 0.12);
-  --primary: #ff2d2d;
+  --primary: #D22E28;
   --primary-foreground: #ffffff;
-  --accent: #ff2d2d;
+  --accent: #D22E28;
   --accent-foreground: #ffffff;
 }
 
@@ -47,9 +47,9 @@
   --muted: rgba(255, 255, 255, 0.08);
   --muted-foreground: rgba(255, 255, 255, 0.6);
   --border: rgba(255, 255, 255, 0.12);
-  --primary: #ff2d2d;
+  --primary: #D22E28;
   --primary-foreground: #ffffff;
-  --accent: #ff2d2d;
+  --accent: #D22E28;
   --accent-foreground: #ffffff;
 }
 
@@ -80,7 +80,7 @@
   }
 
   .dark ::selection {
-    background: rgba(255, 45, 45, 0.35);
+    background: rgba(210, 46, 40, 0.35);
     color: #fff;
   }
 }

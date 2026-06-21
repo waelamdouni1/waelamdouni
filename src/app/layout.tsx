@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   title: siteConfig.seo.title,
   description: siteConfig.seo.description,
   icons: {
-    icon: "/images/avatar.png",
+    icon: "/images/Avatar.png",
   },
   openGraph: {
     title: siteConfig.seo.title,

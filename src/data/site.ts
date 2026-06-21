@@ -3,7 +3,7 @@ import type { SiteConfig } from "@/lib/cms/types";
 export const siteConfig: SiteConfig = {
   name: "Wael Amdouni",
   role: "UI/UX Designer · B2B SaaS & Dashboards",
-  email: "wael.amdouni@outlook.com",
+  email: "hey@waelamdouni.com",
   avatar: "/images/Avatar.png",
   social: [
     {
