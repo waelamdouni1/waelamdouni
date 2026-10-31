@@ -81,7 +81,18 @@ const experiment = z.object({
   gallery: z.array(image).default([]),
 });
 
-export const projectSchema = z.discriminatedUnion("type", [caseStudy, websiteHero, experiment]);
+/** Product work shown as screens and a caption, without a case study. Listed under Work. */
+const productProject = z.object({
+  ...base,
+  type: z.literal("project"),
+  media: viewerMedia,
+  caption: z.string(),
+  externalUrl: z.url().optional(),
+  /** More screens of the same work, shown under the main media when it opens. */
+  gallery: z.array(image).default([]),
+});
+
+export const projectSchema = z.discriminatedUnion("type", [caseStudy, websiteHero, experiment, productProject]);
 
 export const siteSchema = z.object({
   name: z.string(),
@@ -119,7 +130,7 @@ export const siteSchema = z.object({
 
 export type Project = z.infer<typeof projectSchema>;
 export type CaseStudy = z.infer<typeof caseStudy>;
-export type ViewerProject = z.infer<typeof websiteHero> | z.infer<typeof experiment>;
+export type ViewerProject = z.infer<typeof websiteHero> | z.infer<typeof experiment> | z.infer<typeof productProject>;
 export type ProjectType = Project["type"];
 export type SiteSettings = z.infer<typeof siteSchema>;
 export type ProjectImage = z.infer<typeof image>;

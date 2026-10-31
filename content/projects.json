@@ -469,6 +469,48 @@
     ]
   },
   {
+    "type": "project",
+    "title": "Rooly",
+    "slug": "rooly",
+    "summary": "Pond management dashboard for shrimp farms: live water quality, day of culture and trends across ponds.",
+    "thumbnail": {
+      "src": "/media/rooly/overview.webp",
+      "width": 1080,
+      "height": 1080,
+      "alt": "Rooly pond overview: day of culture, water quality targets and live parameters for Pond A1"
+    },
+    "previewMedia": {
+      "src": "/media/rooly/trends.webp",
+      "kind": "image",
+      "poster": "/media/rooly/overview.webp"
+    },
+    "tags": [
+      "Dashboard",
+      "Aquaculture",
+      "Data visualization"
+    ],
+    "year": 2026,
+    "featured": false,
+    "order": 7,
+    "media": {
+      "src": "/media/rooly/overview.webp",
+      "kind": "image",
+      "animated": false,
+      "width": 1080,
+      "height": 1080,
+      "alt": "Rooly pond overview: day of culture, water quality targets and live parameters for Pond A1"
+    },
+    "caption": "Rooly helps shrimp farm teams run their ponds day to day. Pick a farm, unit and pond to see the day of culture, whether the water quality targets are met, and live readings such as dissolved oxygen, pH and water temperature. A trend view compares any parameter across ponds over the culture.",
+    "gallery": [
+      {
+        "src": "/media/rooly/trends.webp",
+        "width": 1080,
+        "height": 1080,
+        "alt": "Multi-pond trend analysis comparing water level, pH, growth rate and N3 across ponds A1 and A2"
+      }
+    ]
+  },
+  {
     "type": "website-hero",
     "title": "GadgetlyHome landing page",
     "slug": "gadgetlyhome-landing",
@@ -491,7 +533,7 @@
     ],
     "year": 2026,
     "featured": false,
-    "order": 7,
+    "order": 8,
     "media": {
       "src": "/media/gadgetlyhome-landing/media.mp4",
       "kind": "video",
@@ -525,7 +567,7 @@
     ],
     "year": 2026,
     "featured": false,
-    "order": 8,
+    "order": 9,
     "media": {
       "src": "/media/earth/media.mp4",
       "kind": "video",
@@ -558,7 +600,7 @@
     ],
     "year": 2026,
     "featured": false,
-    "order": 9,
+    "order": 10,
     "media": {
       "src": "/media/card-game/media.mp4",
       "kind": "video",
@@ -591,7 +633,7 @@
     ],
     "year": 2026,
     "featured": false,
-    "order": 10,
+    "order": 11,
     "media": {
       "src": "/media/landing-page/media.mp4",
       "kind": "video",
@@ -624,7 +666,7 @@
     ],
     "year": 2026,
     "featured": false,
-    "order": 11,
+    "order": 12,
     "media": {
       "src": "/media/notepaper/media.mp4",
       "kind": "video",
@@ -658,7 +700,7 @@
     ],
     "year": 2026,
     "featured": false,
-    "order": 12,
+    "order": 13,
     "media": {
       "src": "/media/circle/media.mp4",
       "kind": "video",
@@ -691,7 +733,7 @@
     ],
     "year": 2026,
     "featured": false,
-    "order": 13,
+    "order": 14,
     "media": {
       "src": "/media/invitation/media.mp4",
       "kind": "video",
@@ -725,7 +767,7 @@
     ],
     "year": 2026,
     "featured": false,
-    "order": 14,
+    "order": 15,
     "media": {
       "src": "/media/delete/media.mp4",
       "kind": "video",

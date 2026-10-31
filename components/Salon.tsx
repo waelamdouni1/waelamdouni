@@ -4,7 +4,7 @@ import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } fr
 import Image from "next/image";
 import { AnimatePresence, useReducedMotion } from "motion/react";
 import type { Project } from "@/lib/schema";
-import { TYPE_LABEL, type Filter } from "@/lib/labels";
+import { TYPE_LABEL, inTab, type Filter } from "@/lib/labels";
 import { packInto, type Fixed, type Placed } from "@/lib/pack";
 import { lockScroll } from "@/lib/scroll-lock";
 import { PreviewMedia } from "./PreviewMedia";
@@ -391,7 +391,7 @@ export function Salon({
                 <Work
                   project={anchor}
                   width={fit(anchor, 2, 2)}
-                  dim={filter !== "all" && anchor.type !== filter}
+                  dim={!inTab(anchor, filter)}
                   hovered={hovered === anchor.slug}
                   register={register}
                   onVisit={visit}
@@ -423,7 +423,7 @@ export function Salon({
                   <Work
                     project={p}
                     width={fit(p, c, r)}
-                    dim={filter !== "all" && p.type !== filter}
+                    dim={!inTab(p, filter)}
                     hovered={hovered === p.slug}
                     register={register}
                     onVisit={visit}

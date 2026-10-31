@@ -2,7 +2,7 @@
 
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import type { Project, SiteSettings } from "@/lib/schema";
-import { parseFilter, type Filter } from "@/lib/labels";
+import { inTab, parseFilter, type Filter } from "@/lib/labels";
 import { track } from "@/lib/analytics";
 import { PANEL_ID, tabId } from "./FilterTabs";
 import { Salon } from "./Salon";
@@ -46,7 +46,7 @@ export function Gallery({
   }, []);
 
   const visible = useMemo(
-    () => (filter === "all" ? projects : projects.filter((p) => p.type === filter)),
+    () => (filter === "all" ? projects : projects.filter((p) => inTab(p, filter))),
     [projects, filter],
   );
 

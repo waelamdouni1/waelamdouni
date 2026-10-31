@@ -7,7 +7,7 @@ import { AboutStrip } from "@/components/AboutStrip";
 import { ProjectNav } from "@/components/ProjectNav";
 import { ViewerBody } from "@/components/ViewerBody";
 import { CaseStudy } from "@/components/case-study/CaseStudy";
-import { TABS } from "@/lib/labels";
+import { TAB_OF, TABS } from "@/lib/labels";
 import styles from "./page.module.css";
 
 type Params = Promise<{ slug: string }>;
@@ -37,14 +37,14 @@ export default async function WorkPage({ params }: { params: Params }) {
   if (!project) notFound();
   const site = getSiteSettings();
   const adjacent = getAdjacent(slug);
-  const backHref = `/?type=${project.type}`;
+  const backHref = `/?type=${TAB_OF[project.type]}`;
 
   return (
     <>
       <Header site={site} />
       <main id="main" className={styles.main}>
         <Link href={backHref} className={styles.back}>
-          <span aria-hidden="true">←</span> All {TABS.find((t) => t.value === project.type)?.label.toLowerCase()}
+          <span aria-hidden="true">←</span> All {TABS.find((t) => t.value === TAB_OF[project.type])?.label.toLowerCase()}
         </Link>
         {project.type === "case-study" ? (
           <CaseStudy project={project} />
