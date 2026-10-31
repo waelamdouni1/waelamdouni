@@ -472,7 +472,7 @@
     "type": "project",
     "title": "Rooly",
     "slug": "rooly",
-    "summary": "Pond management dashboard for shrimp farms: live water quality, day of culture and trends across ponds.",
+    "summary": "Pond management dashboard for shrimp farms.",
     "thumbnail": {
       "src": "/media/rooly/overview.webp",
       "width": 1080,
@@ -500,7 +500,7 @@
       "height": 1080,
       "alt": "Rooly pond overview: day of culture, water quality targets and live parameters for Pond A1"
     },
-    "caption": "Rooly helps shrimp farm teams run their ponds day to day. Pick a farm, unit and pond to see the day of culture, whether the water quality targets are met, and live readings such as dissolved oxygen, pH and water temperature. A trend view compares any parameter across ponds over the culture.",
+    "caption": "Live water quality and day of culture for every pond, plus trends compared across ponds.",
     "gallery": [
       {
         "src": "/media/rooly/trends.webp",
