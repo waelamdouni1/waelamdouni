@@ -1,0 +1,739 @@
+[
+  {
+    "type": "case-study",
+    "title": "GadgetlyHome",
+    "slug": "gadgetlyhome",
+    "summary": "A smart home planner that starts from your home and its annoyances, not from products",
+    "thumbnail": {
+      "src": "/media/gadgetlyhome/play-a-day.webp",
+      "width": 1600,
+      "height": 1200,
+      "alt": "Play a day: a floor plan and a timeline showing what each device does through the day"
+    },
+    "previewMedia": {
+      "src": "/media/gadgetlyhome/your-home.webp",
+      "kind": "image",
+      "poster": "/media/gadgetlyhome/play-a-day.webp"
+    },
+    "tags": [
+      "Web app",
+      "Research",
+      "Smart home"
+    ],
+    "year": 2026,
+    "featured": true,
+    "order": 1,
+    "role": "Research, UX, UI, prototyping and build",
+    "problem": [
+      "Smart home shopping starts with products, not with your home. I asked r/smarthome how people decide what to buy. The post got 13K views and 30 comments, and the strongest pattern in the 19 real answers was to start from an annoyance, not a device. People also distrusted tools that claim to know better."
+    ],
+    "approach": [
+      "So I designed GadgetlyHome around that. You tap the rooms that bother you, and devices appear where they help, each with a plain reason you can keep or remove. Then you “play a day” to see what each one does, and leave with a priced, ordered plan and where to buy. Solar is sized down to the panel. No account needed."
+    ],
+    "highlights": [
+      "Research-driven design decisions",
+      "Four flow framings built and compared",
+      "A planned A/B test to raise sign-up confirmation"
+    ],
+    "screenshots": [
+      {
+        "src": "/media/gadgetlyhome/your-home.webp",
+        "width": 1600,
+        "height": 1200,
+        "alt": "Set up your home: pick a layout, then tap a room to edit its objects",
+        "caption": "Your home: pick a layout, then tap a room to edit what is in it."
+      },
+      {
+        "src": "/media/gadgetlyhome/your-life.webp",
+        "width": 1600,
+        "height": 1200,
+        "alt": "Budget and priority: a budget slider, a top priority and how hands-on you want to be",
+        "caption": "Your life: budget, top priority, and how hands-on you want to be."
+      },
+      {
+        "src": "/media/gadgetlyhome/play-a-day.webp",
+        "width": 1600,
+        "height": 1200,
+        "alt": "Play a day: a floor plan and a timeline showing what each device does through the day",
+        "caption": "Play a day: watch a day in your home and see what each device changes."
+      }
+    ]
+  },
+  {
+    "type": "case-study",
+    "title": "Caria",
+    "slug": "caria",
+    "summary": "Car rental comparison platform unifying offers, booking processes, and fleet management for Tunisian agencies.",
+    "thumbnail": {
+      "src": "/media/caria/featured.webp",
+      "width": 1600,
+      "height": 900,
+      "alt": "Caria vehicle page with prices and rental dates, over the agency reservations dashboard"
+    },
+    "previewMedia": {
+      "src": "/media/caria/search.webp",
+      "kind": "image",
+      "poster": "/media/caria/featured.webp"
+    },
+    "tags": [
+      "Web app",
+      "Car rental",
+      "Dashboard"
+    ],
+    "year": 2024,
+    "featured": false,
+    "order": 2,
+    "role": "UI/UX Designer",
+    "timeline": "4 months",
+    "overview": [
+      "Caria resolves agency fragmentation by offering a unified booking and search platform. Renters can locate, compare, and reserve vehicles through a simplified, reliable UI."
+    ],
+    "problem": [
+      "Renting a car in Tunisia required comparing offers across multiple agencies, creating a fragmented user experience."
+    ],
+    "sections": [
+      {
+        "title": "Research & Discovery",
+        "body": [
+          "Conducted interviews with renters and local car rental owners to map out pricing schemas, availability constraints, and typical trust barriers."
+        ]
+      },
+      {
+        "title": "UX Strategy",
+        "body": [
+          "Designed a car rental comparison platform allowing users to compare vehicles, prices, and agencies from a single interface."
+        ]
+      },
+      {
+        "title": "Design System",
+        "body": [
+          "Developed a modern layout engine with custom filter panels, detailed comparison tables, and agency review badges."
+        ]
+      }
+    ],
+    "outcome": [
+      "Created a unified comparison experience that simplified the car rental search and booking process."
+    ],
+    "screenshots": [
+      {
+        "src": "/media/caria/search.webp",
+        "width": 1600,
+        "height": 900,
+        "alt": "Search results with filters, car categories and a vehicle card",
+        "caption": "Vehicle search grid layout"
+      },
+      {
+        "src": "/media/caria/detail.webp",
+        "width": 1600,
+        "height": 900,
+        "alt": "Vehicle detail page with photos, rental dates and price breakdown",
+        "caption": "Pricing details and terms overview"
+      },
+      {
+        "src": "/media/caria/reservation.webp",
+        "width": 1600,
+        "height": 900,
+        "alt": "Agency dashboard showing a reservation’s details and actions",
+        "caption": "Fleet reservation dashboard"
+      }
+    ]
+  },
+  {
+    "type": "case-study",
+    "title": "Transit Management Platform",
+    "slug": "transit-management",
+    "summary": "Real-time dispatch, route monitoring, and operational compliance platform customized for ZATCA’s requirements.",
+    "thumbnail": {
+      "src": "/media/transit-management/cover.webp",
+      "width": 1600,
+      "height": 900,
+      "alt": "Transit Management System: the driver app on a phone beside the live fleet map"
+    },
+    "previewMedia": {
+      "src": "/media/transit-management/live-map.webp",
+      "kind": "image",
+      "poster": "/media/transit-management/cover.webp"
+    },
+    "tags": [
+      "Dashboard",
+      "Maps",
+      "Mobile app"
+    ],
+    "year": 2025,
+    "featured": false,
+    "order": 3,
+    "role": "Lead Product Designer",
+    "timeline": "4 months",
+    "overview": [
+      "The Transit Management Platform empowers operators to monitor vehicles, trips, and overall transit operations in real time. The project successfully tailored the interface to ZATCA’s operational regulations while drastically improving dispatcher ergonomics."
+    ],
+    "problem": [
+      "Operators struggled to monitor vehicles, trips, and transit operations in real time, making daily operations difficult to manage efficiently and causing compliance delays."
+    ],
+    "sections": [
+      {
+        "title": "Research & Discovery",
+        "body": [
+          "Conducted contextual inquiries with dispatch managers and shadowed operations teams to understand high-stress telemetry monitoring, cognitive load, and routing priorities."
+        ]
+      },
+      {
+        "title": "UX Strategy",
+        "body": [
+          "Designed a real-time transit management platform with interactive maps, zone management, trip monitoring, operational dashboards, and a companion mobile app for drivers."
+        ]
+      },
+      {
+        "title": "Design System",
+        "body": [
+          "Developed a telemetry-oriented UI kit with unified status indicators, clear typography scale for mapping interfaces, and highly visible interactive alert nodes."
+        ]
+      }
+    ],
+    "outcome": [
+      "Improved the user experience and successfully customized the platform to meet ZATCA’s operational requirements."
+    ],
+    "screenshots": [
+      {
+        "src": "/media/transit-management/live-map.webp",
+        "width": 1600,
+        "height": 900,
+        "alt": "Live map of vehicles by status, with a zone drawn over Riyadh",
+        "caption": "Live fleet map with vehicle status filters and zones"
+      },
+      {
+        "src": "/media/transit-management/driver-app.webp",
+        "width": 1600,
+        "height": 900,
+        "alt": "Driver app: active trips, route selection step and end trip signature",
+        "caption": "Driver app: active trips, route selection and a signed trip end"
+      },
+      {
+        "src": "/media/transit-management/trip-details.webp",
+        "width": 1600,
+        "height": 900,
+        "alt": "Trip details with progress, device lock controls and live tracking on the map",
+        "caption": "Trip details with live tracking and device controls"
+      },
+      {
+        "src": "/media/transit-management/statistics.webp",
+        "width": 1600,
+        "height": 900,
+        "alt": "Statistics dashboard with vehicle, device and port counts and alert charts",
+        "caption": "Device statistics dashboard"
+      }
+    ]
+  },
+  {
+    "type": "case-study",
+    "title": "LRT Cloud",
+    "slug": "lrt-cloud",
+    "summary": "Centralized SaaS dashboard for charging station telemetry, automated reimbursements, and energy grid load balancing.",
+    "thumbnail": {
+      "src": "/media/lrt-cloud/cover.webp",
+      "width": 1600,
+      "height": 900,
+      "alt": "LRT Cloud energy systems view in front of the reports screen"
+    },
+    "previewMedia": {
+      "src": "/media/lrt-cloud/energy-systems.webp",
+      "kind": "image",
+      "poster": "/media/lrt-cloud/cover.webp"
+    },
+    "tags": [
+      "SaaS",
+      "Dashboard",
+      "EV charging"
+    ],
+    "year": 2024,
+    "featured": false,
+    "order": 4,
+    "role": "Lead Product Designer",
+    "timeline": "5 months",
+    "overview": [
+      "LRT Cloud is a centralized platform for managing charging stations, users, organizations, subscriptions, reimbursements, and energy systems, helping operators track load distribution and billing."
+    ],
+    "problem": [
+      "EV charging operators lacked a centralized way to monitor charging stations, users, and energy consumption in a unified interface."
+    ],
+    "sections": [
+      {
+        "title": "Research & Discovery",
+        "body": [
+          "Audited energy management standards and surveyed station operators to map the core billing and maintenance workflow loops."
+        ]
+      },
+      {
+        "title": "UX Strategy",
+        "body": [
+          "Designed a cloud platform for managing charging stations, users, organizations, subscriptions, reimbursements, and energy systems."
+        ]
+      },
+      {
+        "title": "Design System",
+        "body": [
+          "Created a component framework with telemetry sparklines, consumption badges, and subscription/pricing builder patterns."
+        ]
+      }
+    ],
+    "outcome": [
+      "Accelerated product readiness by designing scalable workflows for charging management, reimbursements, subscriptions, and energy systems."
+    ],
+    "screenshots": [
+      {
+        "src": "/media/lrt-cloud/energy-systems.webp",
+        "width": 1600,
+        "height": 900,
+        "alt": "Energy systems view: an illustrated site showing grid, solar, battery, EV and building power",
+        "caption": "Energy systems: grid, solar, battery and charging at a glance"
+      },
+      {
+        "src": "/media/lrt-cloud/dashboard.webp",
+        "width": 1600,
+        "height": 900,
+        "alt": "Dashboard with a map of charging park locations and a used capacity chart",
+        "caption": "Dashboard with charging park locations"
+      },
+      {
+        "src": "/media/lrt-cloud/ev-charging.webp",
+        "width": 1600,
+        "height": 900,
+        "alt": "EV charging: charging parks with capacity, load balancing, pricing and charge boxes",
+        "caption": "EV charging: parks, charge boxes and their status"
+      },
+      {
+        "src": "/media/lrt-cloud/reports.webp",
+        "width": 1600,
+        "height": 900,
+        "alt": "Financial overview report charting cost, revenue and profit margin",
+        "caption": "Reports: revenue, energy cost and profit margin"
+      }
+    ]
+  },
+  {
+    "type": "case-study",
+    "title": "PowerUp Mobile App",
+    "slug": "powerup",
+    "summary": "Reimagined EV charging app focusing on seamless hardware onboarding, instant map payments, and charging logs.",
+    "thumbnail": {
+      "src": "/media/powerup/cover.webp",
+      "width": 1600,
+      "height": 900,
+      "alt": "PowerUp app on three phones: an active charging session, a session summary and a charging station on the map"
+    },
+    "previewMedia": {
+      "src": "/media/powerup/charging.webp",
+      "kind": "image",
+      "poster": "/media/powerup/cover.webp"
+    },
+    "tags": [
+      "Mobile app",
+      "EV charging",
+      "Onboarding"
+    ],
+    "year": 2024,
+    "featured": false,
+    "order": 5,
+    "role": "UI/UX Designer",
+    "timeline": "3 months",
+    "overview": [
+      "The PowerUp mobile app delivers an intuitive onboarding and charger setup experience. The redesign addresses major onboarding bottlenecks and provides streamlined public charging paths."
+    ],
+    "problem": [
+      "Users found public charging and charger setup unnecessarily complex, leading to friction during onboarding and charging sessions."
+    ],
+    "sections": [
+      {
+        "title": "Research & Discovery",
+        "body": [
+          "Conducted card sorting, interactive remote usability tests, and user interviews to isolate key points of drop-off during the initial Bluetooth charger pairing sequence."
+        ]
+      },
+      {
+        "title": "UX Strategy",
+        "body": [
+          "Redesigned the mobile experience focusing on charger setup, public charging, user engagement, and growth-focused UX improvements."
+        ]
+      },
+      {
+        "title": "Design System",
+        "body": [
+          "Constructed a high-contrast mobile design system optimized for outdoor visibility, featuring friendly helper illustrations and large touch targets."
+        ]
+      }
+    ],
+    "outcome": [
+      "Improved the charging experience through a redesigned onboarding flow and growth-focused user journeys."
+    ],
+    "screenshots": [
+      {
+        "src": "/media/powerup/charging.webp",
+        "width": 1600,
+        "height": 900,
+        "alt": "Wall box screen before and during charging, with range added and charging power",
+        "caption": "Start charging, then follow range and power live"
+      },
+      {
+        "src": "/media/powerup/stations-map.webp",
+        "width": 1600,
+        "height": 900,
+        "alt": "Map of charging stations with a station sheet and a filtered station list",
+        "caption": "Find a station on the map and see its available chargers"
+      },
+      {
+        "src": "/media/powerup/pay.webp",
+        "width": 1600,
+        "height": 900,
+        "alt": "Wall box screen with Apple Pay and Google Pay and a member sign-in link",
+        "caption": "Pay at the charger without an account, or sign in for member rates"
+      }
+    ]
+  },
+  {
+    "type": "case-study",
+    "title": "PTS Redesign",
+    "slug": "pts-redesign",
+    "summary": "An internal project management tool, simplified through research and streamlined workflows.",
+    "thumbnail": {
+      "src": "/media/pts-redesign/cover.webp",
+      "width": 1600,
+      "height": 900,
+      "alt": "PTS project overview with sprint charts, surrounded by a task card, a create menu and a status legend"
+    },
+    "previewMedia": {
+      "src": "/media/pts-redesign/board.webp",
+      "kind": "image",
+      "poster": "/media/pts-redesign/cover.webp"
+    },
+    "tags": [
+      "Project management",
+      "Dashboard",
+      "Internal tool"
+    ],
+    "year": 2023,
+    "featured": false,
+    "order": 6,
+    "role": "UI/UX Designer",
+    "timeline": "6 months",
+    "overview": [
+      "The PTS Redesign focused on simplifying internal project management systems. By analyzing team behaviors and streamlining workflows, we transformed a complex application into an operational tool."
+    ],
+    "problem": [
+      "Users struggled with a complex interface and inefficient workflows that slowed daily operations."
+    ],
+    "sections": [
+      {
+        "title": "Research & Discovery",
+        "body": [
+          "Performed shadowing, workflow diagram audits, and user surveys to identify where multi-team handoffs failed or became blocked."
+        ]
+      },
+      {
+        "title": "UX Strategy",
+        "body": [
+          "Redesigned the platform using user research, improved information architecture, and simplified workflows for internal project management."
+        ]
+      },
+      {
+        "title": "Design System",
+        "body": [
+          "Rebuilt the dashboard theme with modular task tables, notification center models, and clean dashboard stats."
+        ]
+      }
+    ],
+    "outcome": [
+      "Research insights helped streamline task management and improve collaboration between multiple teams."
+    ],
+    "screenshots": [
+      {
+        "src": "/media/pts-redesign/home.webp",
+        "width": 1600,
+        "height": 900,
+        "alt": "Home with today’s daily scrums, their status and progress, and team news",
+        "caption": "Home: today’s daily scrums and team news"
+      },
+      {
+        "src": "/media/pts-redesign/overview.webp",
+        "width": 1600,
+        "height": 900,
+        "alt": "Project overview with filters, story points per sprint and sprint progress",
+        "caption": "Project overview with sprint progress"
+      },
+      {
+        "src": "/media/pts-redesign/board.webp",
+        "width": 1600,
+        "height": 900,
+        "alt": "Sprint board with tasks in progress, in review and completed",
+        "caption": "Sprint board: in progress, in review, completed"
+      }
+    ]
+  },
+  {
+    "type": "website-hero",
+    "title": "GadgetlyHome landing page",
+    "slug": "gadgetlyhome-landing",
+    "summary": "A smart-home planner landing page with a room you can explore",
+    "thumbnail": {
+      "src": "/media/gadgetlyhome-landing/thumb.webp",
+      "width": 1600,
+      "height": 790,
+      "alt": "GadgetlyHome landing page with a dark isometric room"
+    },
+    "previewMedia": {
+      "src": "/media/gadgetlyhome-landing/preview.mp4",
+      "kind": "video",
+      "poster": "/media/gadgetlyhome-landing/thumb.webp"
+    },
+    "tags": [
+      "Landing page",
+      "3D",
+      "Product"
+    ],
+    "year": 2026,
+    "featured": false,
+    "order": 7,
+    "media": {
+      "src": "/media/gadgetlyhome-landing/media.mp4",
+      "kind": "video",
+      "animated": false,
+      "width": 1600,
+      "height": 790,
+      "alt": "GadgetlyHome landing page with a dark isometric room"
+    },
+    "caption": "Landing page for GadgetlyHome. An isometric room sets the scene, so the promise of a planned smart home is shown, not just told, before the first click on “Plan my home”."
+  },
+  {
+    "type": "experiment",
+    "title": "Earth",
+    "slug": "earth",
+    "summary": "A dotted globe you spin before naming a landmark",
+    "thumbnail": {
+      "src": "/media/earth/thumb.webp",
+      "width": 1600,
+      "height": 793,
+      "alt": "A dotted globe beside a “What should we call you?” naming field"
+    },
+    "previewMedia": {
+      "src": "/media/earth/preview.mp4",
+      "kind": "video",
+      "poster": "/media/earth/thumb.webp"
+    },
+    "tags": [
+      "Prototype",
+      "Interaction",
+      "Onboarding"
+    ],
+    "year": 2026,
+    "featured": false,
+    "order": 8,
+    "media": {
+      "src": "/media/earth/media.mp4",
+      "kind": "video",
+      "animated": false,
+      "width": 1600,
+      "height": 794,
+      "alt": "A dotted globe beside a “What should we call you?” naming field"
+    },
+    "caption": "A prototype onboarding step: spin a dotted globe, pick a spot, then give the landmark a name."
+  },
+  {
+    "type": "experiment",
+    "title": "Card game",
+    "slug": "card-game",
+    "summary": "A collectible card that tilts and catches the light",
+    "thumbnail": {
+      "src": "/media/card-game/thumb.webp",
+      "width": 1600,
+      "height": 793,
+      "alt": "A collectible card titled Lighthouse Keeper of the Northern Reaches"
+    },
+    "previewMedia": {
+      "src": "/media/card-game/preview.mp4",
+      "kind": "video",
+      "poster": "/media/card-game/thumb.webp"
+    },
+    "tags": [
+      "Prototype",
+      "Motion"
+    ],
+    "year": 2026,
+    "featured": false,
+    "order": 9,
+    "media": {
+      "src": "/media/card-game/media.mp4",
+      "kind": "video",
+      "animated": false,
+      "width": 1600,
+      "height": 794,
+      "alt": "A collectible card titled Lighthouse Keeper of the Northern Reaches"
+    },
+    "caption": "A collectible card that follows the cursor, tilting and shining like a real foil card."
+  },
+  {
+    "type": "website-hero",
+    "title": "Casa Nova",
+    "slug": "landing-page",
+    "summary": "A landing page for an estate agency that sells fewer homes, better",
+    "thumbnail": {
+      "src": "/media/landing-page/thumb.webp",
+      "width": 1600,
+      "height": 797,
+      "alt": "Casa Nova landing page with interior photos and a “23 days” stat"
+    },
+    "previewMedia": {
+      "src": "/media/landing-page/preview.mp4",
+      "kind": "video",
+      "poster": "/media/landing-page/thumb.webp"
+    },
+    "tags": [
+      "Landing page",
+      "Real estate"
+    ],
+    "year": 2026,
+    "featured": false,
+    "order": 10,
+    "media": {
+      "src": "/media/landing-page/media.mp4",
+      "kind": "video",
+      "animated": false,
+      "width": 1600,
+      "height": 796,
+      "alt": "Casa Nova landing page with interior photos and a “23 days” stat"
+    },
+    "caption": "Landing page for Casa Nova, a small estate agency. Warm photography and one honest number, the average days to sell, carry the pitch."
+  },
+  {
+    "type": "experiment",
+    "title": "Notepaper",
+    "slug": "notepaper",
+    "summary": "Notes as paper scraps you pin up and throw away",
+    "thumbnail": {
+      "src": "/media/notepaper/thumb.webp",
+      "width": 1600,
+      "height": 793,
+      "alt": "Paper notes pinned to a wall, a new-note dialog and a bin"
+    },
+    "previewMedia": {
+      "src": "/media/notepaper/preview.mp4",
+      "kind": "video",
+      "poster": "/media/notepaper/thumb.webp"
+    },
+    "tags": [
+      "Prototype",
+      "Interaction"
+    ],
+    "year": 2026,
+    "featured": false,
+    "order": 11,
+    "media": {
+      "src": "/media/notepaper/media.mp4",
+      "kind": "video",
+      "animated": false,
+      "width": 1600,
+      "height": 794,
+      "alt": "Paper notes pinned to a wall, a new-note dialog and a bin"
+    },
+    "caption": "A notes app where every note is a paper scrap on a wall, and deleting one means tossing it in the bin."
+  },
+  {
+    "type": "experiment",
+    "title": "Circle",
+    "slug": "circle",
+    "summary": "A savings-circle app: who has paid, who gets the pot",
+    "thumbnail": {
+      "src": "/media/circle/thumb.webp",
+      "width": 416,
+      "height": 868,
+      "alt": "A savings-circle app showing members and a Mark as paid button"
+    },
+    "previewMedia": {
+      "src": "/media/circle/preview.mp4",
+      "kind": "video",
+      "poster": "/media/circle/thumb.webp"
+    },
+    "tags": [
+      "Prototype",
+      "Mobile",
+      "Fintech"
+    ],
+    "year": 2026,
+    "featured": false,
+    "order": 12,
+    "media": {
+      "src": "/media/circle/media.mp4",
+      "kind": "video",
+      "animated": false,
+      "width": 416,
+      "height": 868,
+      "alt": "A savings-circle app showing members and a Mark as paid button"
+    },
+    "caption": "A mobile prototype for a rotating savings circle: see who has paid, who receives this month’s pot, and send a gentle reminder."
+  },
+  {
+    "type": "experiment",
+    "title": "Invitation",
+    "slug": "invitation",
+    "summary": "A wedding invitation designed for the screen",
+    "thumbnail": {
+      "src": "/media/invitation/thumb.webp",
+      "width": 1600,
+      "height": 790,
+      "alt": "A wedding invitation card for Salma and Youssef"
+    },
+    "previewMedia": {
+      "src": "/media/invitation/preview.mp4",
+      "kind": "video",
+      "poster": "/media/invitation/thumb.webp"
+    },
+    "tags": [
+      "Prototype",
+      "Motion"
+    ],
+    "year": 2026,
+    "featured": false,
+    "order": 13,
+    "media": {
+      "src": "/media/invitation/media.mp4",
+      "kind": "video",
+      "animated": false,
+      "width": 1600,
+      "height": 790,
+      "alt": "A wedding invitation card for Salma and Youssef"
+    },
+    "caption": "A digital wedding invitation for Salma and Youssef, with the day’s schedule laid out like a printed card."
+  },
+  {
+    "type": "experiment",
+    "title": "Delete",
+    "slug": "delete",
+    "summary": "Deleting a file by setting it on fire",
+    "thumbnail": {
+      "src": "/media/delete/thumb.webp",
+      "width": 394,
+      "height": 852,
+      "alt": "A phone showing a PDF burning away after tapping a flame button"
+    },
+    "previewMedia": {
+      "src": "/media/delete/preview.mp4",
+      "kind": "video",
+      "poster": "/media/delete/thumb.webp"
+    },
+    "tags": [
+      "Prototype",
+      "Mobile",
+      "Motion"
+    ],
+    "year": 2026,
+    "featured": false,
+    "order": 14,
+    "media": {
+      "src": "/media/delete/media.mp4",
+      "kind": "video",
+      "animated": false,
+      "width": 394,
+      "height": 852,
+      "alt": "A phone showing a PDF burning away after tapping a flame button"
+    },
+    "caption": "A playful delete interaction on mobile: tap the flame and the file burns away."
+  }
+]

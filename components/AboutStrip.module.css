@@ -1,0 +1,50 @@
+.strip {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: clamp(48px, 6vw, 80px) var(--gutter) 24px;
+  border-top: 1px solid var(--hairline);
+}
+
+.lead {
+  font-size: 14px;
+  color: var(--ink-muted);
+}
+
+.email {
+  display: inline-block;
+  margin-top: 6px;
+  font-weight: 600;
+  font-size: clamp(28px, 4.4vw, 56px);
+  line-height: 1.1;
+  letter-spacing: -0.035em;
+  overflow-wrap: anywhere;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-decoration-color: var(--hairline-strong);
+  text-underline-offset: 0.12em;
+  transition: text-decoration-color var(--duration-hover) var(--ease-out);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .email:hover {
+    text-decoration-color: currentColor;
+  }
+}
+
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 8px 24px;
+  margin-top: clamp(48px, 6vw, 80px);
+  font-size: 13px;
+  color: var(--ink-muted);
+}
+
+.socials {
+  display: flex;
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
