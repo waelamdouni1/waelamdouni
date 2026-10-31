@@ -1,0 +1,224 @@
+/* The open project: blurred wall, the work alone in the middle, caption top-left */
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-viewer);
+  background: var(--scrim);
+  backdrop-filter: blur(24px) saturate(140%);
+}
+
+/* Phones: caption on top, the work and its screens under it, scrolling */
+.scroller {
+  --fit-h: 64dvh;
+  position: fixed;
+  inset: 0;
+  z-index: calc(var(--z-viewer) + 1);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px 20px 96px;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+.caption {
+  flex: none;
+  display: grid;
+  justify-items: start;
+  max-width: 340px;
+  padding-right: 56px;
+}
+
+.title {
+  font-size: 20px;
+  line-height: 26px;
+  letter-spacing: -0.02em;
+}
+
+.text {
+  margin-top: 6px;
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--ink-soft);
+  text-wrap: pretty;
+}
+
+.meta {
+  margin-top: 10px;
+  font-size: 13px;
+  color: var(--ink-muted);
+}
+
+.action {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  height: 36px;
+  margin-top: 14px;
+  /* Trailing icon: 2px less on its side so the label looks centred */
+  padding: 0 12px 0 14px;
+  border-radius: 999px;
+  background: var(--glass-strong);
+  box-shadow: inset 0 0 0 1px var(--glass-border);
+  color: var(--ink);
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  transition:
+    background-color var(--duration-hover) var(--ease-out),
+    scale var(--duration-hover) var(--ease-out);
+}
+
+/* 36px visual, 44px touch target */
+.action::before {
+  content: "";
+  position: absolute;
+  inset: -4px 0;
+}
+
+.action:active {
+  scale: 0.97;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .action:hover {
+    background: var(--glass-hover);
+  }
+}
+
+/* Flex, not grid: grid rows would let the screens shrink and overlap */
+.stack {
+  flex: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Each screen fits the viewport height, never wider than the room it has */
+.media {
+  flex: none;
+  position: relative;
+  width: min(100%, 1100px, calc(var(--fit-h) * var(--ratio)));
+  overflow: hidden;
+  border-radius: 16px;
+  background: var(--wall-deep);
+  box-shadow:
+    0 0 0 1px oklch(100% 0 0 / 0.08),
+    0 30px 80px oklch(0% 0 0 / 0.5);
+}
+
+.img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Wide screens: caption pinned top-left, the work centred in the room right of it */
+@media (min-width: 900px) {
+  .scroller {
+    --fit-h: calc(100dvh - 48px);
+    padding: 24px 92px 24px 360px;
+  }
+  .caption {
+    position: fixed;
+    top: 24px;
+    left: 24px;
+    width: 300px;
+    padding-right: 0;
+  }
+  .stack {
+    min-height: calc(100dvh - 48px);
+  }
+}
+
+.controls {
+  position: fixed;
+  inset: 0;
+  z-index: calc(var(--z-viewer) + 2);
+  pointer-events: none;
+}
+
+.round {
+  position: absolute;
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border: 0;
+  border-radius: 999px;
+  background: var(--scrim);
+  backdrop-filter: var(--blur);
+  box-shadow: inset 0 0 0 1px var(--glass-border);
+  color: var(--ink);
+  cursor: pointer;
+  pointer-events: auto;
+  touch-action: manipulation;
+  transition:
+    background-color var(--duration-hover) var(--ease-out),
+    scale var(--duration-hover) var(--ease-out);
+}
+
+.round:active {
+  scale: 0.96;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .round:hover {
+    background: var(--glass-hover);
+  }
+}
+
+.close {
+  top: 20px;
+  right: 20px;
+}
+
+/* Phones: arrows along the bottom edge, counter between them */
+.prev,
+.next {
+  bottom: 20px;
+}
+
+.prev {
+  left: 20px;
+}
+
+.next {
+  right: 20px;
+}
+
+.count {
+  position: absolute;
+  bottom: 32px;
+  left: 0;
+  right: 0;
+  width: fit-content;
+  margin: 0 auto;
+  font-size: 13px;
+  color: var(--ink-soft);
+  font-variant-numeric: tabular-nums;
+}
+
+/* Wide screens: the previous arrow sits left of the work, under the caption; next on the right edge */
+@media (min-width: 900px) {
+  .prev,
+  .next {
+    bottom: auto;
+    top: calc(50% - 22px);
+  }
+  .prev {
+    left: 300px;
+  }
+  .next {
+    right: 24px;
+  }
+  .count {
+    bottom: 24px;
+    left: 360px;
+    right: 92px;
+  }
+}

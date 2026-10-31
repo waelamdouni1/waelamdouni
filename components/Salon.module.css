@@ -1,0 +1,269 @@
+/* The wall: a dark room you roam; only the works are lit */
+.stage {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  background: oklch(11% 0.004 70);
+  cursor: grab;
+  touch-action: none;
+  user-select: none;
+  -webkit-user-select: none;
+  outline: none;
+}
+
+.stage[data-dragging] {
+  cursor: grabbing;
+}
+
+.stage:focus-visible {
+  box-shadow: inset 0 0 0 2px var(--ink);
+}
+
+.world {
+  position: absolute;
+  top: 0;
+  left: 0;
+  will-change: transform;
+}
+
+.wall {
+  display: grid;
+}
+
+/* Each work sits centred in its slot at its own shape, so the gaps vary like a real salon wall */
+.cell {
+  display: grid;
+  place-items: center;
+  min-width: 0;
+  min-height: 0;
+}
+
+/* The button is the hit area and never moves; .inner carries the repel transform */
+.work {
+  position: relative;
+  display: block;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--ink);
+  text-align: left;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
+.work:focus-visible {
+  outline: none;
+}
+
+.work:focus-visible .art {
+  outline: 2px solid var(--ink);
+  outline-offset: 5px;
+}
+
+.inner {
+  --s: 1;
+  --dx: 0px;
+  --dy: 0px;
+  position: absolute;
+  inset: 0;
+  display: block;
+  transform: translate3d(var(--dx), var(--dy), 0) scale(var(--s));
+  transition: transform 340ms var(--ease-out);
+  will-change: transform;
+}
+
+/* The card: rounded, thin light border, the work inset over a blurred copy of itself */
+.art {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  isolation: isolate;
+  border-radius: var(--radius-card);
+  background: var(--wall-deep);
+  box-shadow:
+    0 0 0 1px oklch(100% 0 0 / 0.1),
+    0 30px 50px -26px oklch(0% 0 0 / 0.9);
+  transition:
+    filter 250ms var(--ease-out),
+    opacity 250ms var(--ease-out),
+    box-shadow 200ms var(--ease-out);
+}
+
+.work[data-active] .art {
+  box-shadow:
+    0 0 0 1px oklch(100% 0 0 / 0.16),
+    0 40px 70px -24px oklch(0% 0 0 / 0.95);
+}
+
+.backdrop {
+  position: absolute;
+  inset: -16%;
+  pointer-events: none;
+}
+
+.backdropImg {
+  object-fit: cover;
+  filter: blur(28px) saturate(1.3) brightness(0.55);
+}
+
+.shot {
+  position: absolute;
+  inset: 4px;
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow:
+    0 0 0 1px oklch(100% 0 0 / 0.08),
+    0 18px 40px -16px oklch(0% 0 0 / 0.75);
+}
+
+/* Phones: no card, just the phone, clipped to its own frame so the recording's corners go */
+.work[data-phone] .art {
+  border-radius: var(--phone-r);
+  background: none;
+  box-shadow: 0 30px 50px -26px oklch(0% 0 0 / 0.9);
+}
+
+.work[data-phone][data-active] .art {
+  box-shadow: 0 40px 70px -24px oklch(0% 0 0 / 0.95);
+}
+
+.work[data-phone] .shot {
+  inset: 0;
+  border-radius: inherit;
+  box-shadow: none;
+}
+
+.work[data-phone]:focus-visible .art {
+  outline-offset: 3px;
+}
+
+.img {
+  object-fit: cover;
+  pointer-events: none;
+}
+
+.work:active .inner {
+  transform: translate3d(var(--dx), var(--dy), 0) scale(calc(var(--s) * 0.98));
+  transition-duration: var(--duration-hover);
+}
+
+/* Frosted caption, top left, like the grid had: shown on hover or keyboard focus */
+.caption {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  max-width: calc(100% - 20px);
+  display: grid;
+  gap: 1px;
+  padding: 8px 12px;
+  border-radius: 12px;
+  background: var(--scrim);
+  backdrop-filter: var(--blur);
+  box-shadow: inset 0 0 0 1px var(--glass-border);
+  pointer-events: none;
+}
+
+.captionTitle,
+.captionText {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.captionTitle {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  letter-spacing: -0.01em;
+}
+
+.captionText {
+  font-size: 13px;
+  line-height: 18px;
+  color: var(--ink-soft);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .caption {
+    opacity: 0;
+    transform: translateY(-6px);
+    filter: blur(4px);
+    transition:
+      opacity var(--duration-reveal) var(--ease-out),
+      transform var(--duration-reveal) var(--ease-out),
+      filter var(--duration-reveal) var(--ease-out);
+  }
+  .work[data-active] .caption {
+    opacity: 1;
+    transform: none;
+    filter: none;
+  }
+}
+
+/* Touch screens: the title is always shown, compact */
+@media (hover: none) {
+  .captionText {
+    display: none;
+  }
+}
+
+/* Filtered out: dimmed and not clickable */
+.work[data-dim] {
+  pointer-events: none;
+}
+
+.work[data-dim] .art {
+  filter: brightness(0.25) saturate(0.3);
+}
+
+.work[data-dim] .caption {
+  opacity: 0;
+}
+
+/* Above the dock, clear of the artwork at the top of the view */
+.hint {
+  position: absolute;
+  bottom: calc(max(16px, env(safe-area-inset-bottom)) + 68px);
+  left: 0;
+  right: 0;
+  width: fit-content;
+  margin: 0 auto;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: var(--scrim);
+  backdrop-filter: var(--blur);
+  box-shadow: inset 0 0 0 1px var(--glass-border);
+  font-size: 13px;
+  color: var(--ink-soft);
+  pointer-events: none;
+  animation: hint 6s 600ms var(--ease-out) both;
+}
+
+@keyframes hint {
+  0% {
+    opacity: 0;
+    translate: 0 -6px;
+  }
+  8%,
+  85% {
+    opacity: 1;
+    translate: 0 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .inner,
+  .art,
+  .caption {
+    transition: none;
+  }
+  .hint {
+    animation: none;
+    opacity: 0;
+  }
+}

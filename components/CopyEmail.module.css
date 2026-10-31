@@ -1,0 +1,102 @@
+.copy {
+  position: relative;
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 0;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 500;
+  white-space: nowrap;
+  cursor: pointer;
+  touch-action: manipulation;
+  transition:
+    background-color var(--duration-hover) var(--ease-out),
+    color var(--duration-hover) var(--ease-out),
+    transform var(--duration-hover) var(--ease-out);
+}
+
+.copy:active {
+  transform: scale(0.96);
+}
+
+/* Dock: solid, the page's one primary action */
+.copy[data-variant="dock"] {
+  height: 40px;
+  padding: 0 16px 0 14px;
+  background: var(--ink);
+  color: var(--paper);
+}
+
+/* About card: quiet glass pill */
+.copy[data-variant="card"] {
+  height: 40px;
+  padding: 0 14px 0 12px;
+  background: var(--glass-strong);
+  color: var(--ink-soft);
+}
+
+/* 40px visual, 44px touch target */
+.copy[data-variant="dock"]::before,
+.copy[data-variant="card"]::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .copy[data-variant="dock"]:hover {
+    background: oklch(98% 0 0 / 0.86);
+  }
+  .copy[data-variant="card"]:hover {
+    background: var(--glass-hover);
+    color: var(--ink);
+  }
+}
+
+.icon {
+  display: grid;
+  place-items: center;
+}
+
+.copy[data-copied] .icon {
+  animation: pop 260ms var(--ease-out);
+}
+
+@keyframes pop {
+  from {
+    scale: 0.6;
+    opacity: 0;
+  }
+}
+
+.labels {
+  display: grid;
+}
+
+.labels > * {
+  grid-area: 1 / 1;
+}
+
+.labels > [data-hidden] {
+  visibility: hidden;
+}
+
+/* Phones: the dock's copy button shrinks to its icon so the tabs keep their room */
+@media (max-width: 640px) {
+  .copy[data-variant="dock"] {
+    width: 40px;
+    padding: 0;
+    justify-content: center;
+  }
+  .copy[data-variant="dock"] .labels {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .copy[data-copied] .icon {
+    animation: none;
+  }
+}

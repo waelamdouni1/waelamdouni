@@ -1,0 +1,8 @@
+/* The salon wall is fixed full-screen; the page itself has nothing to scroll */
+.layout {
+  min-height: 100dvh;
+}
+
+.main {
+  min-width: 0;
+}

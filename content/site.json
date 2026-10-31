@@ -1,0 +1,43 @@
+{
+  "name": "Wael Amdouni",
+  "shortName": "Wael",
+  "role": "UX/UI Designer",
+  "bio": "UX/UI Designer for enterprise SaaS, dashboards, and mobile apps, simplifying complex workflows through design systems and AI-assisted prototyping.",
+  "about": [
+    "UX/UI Designer for enterprise SaaS, dashboards, and mobile apps, simplifying complex workflows through design systems and AI-assisted prototyping."
+  ],
+  "avatar": "/avatar.webp",
+  "email": "hey@waelamdouni.com",
+  "resume": null,
+  "siteUrl": "https://waelamdouni.com",
+  "featured": {
+    "kicker": "Latest project",
+    "title": "GadgetlyHome",
+    "text": "Plan your smart home in two minutes: tell it about your home, your life and your budget, and get a setup that fits.",
+    "cta": "Try GadgetlyHome",
+    "project": "gadgetlyhome",
+    "cover": {
+      "src": "/media/featured-gadgetly.webp",
+      "width": 960,
+      "height": 720,
+      "alt": "GadgetlyHome planner asking for budget and top priority"
+    }
+  },
+  "socials": [
+    {
+      "label": "X",
+      "icon": "x",
+      "url": "https://x.com/waelamdouni4"
+    },
+    {
+      "label": "LinkedIn",
+      "icon": "linkedin",
+      "url": "https://www.linkedin.com/in/wael-amdouni/"
+    },
+    {
+      "label": "Framer",
+      "icon": "framer",
+      "url": "https://www.framer.com/@wael-amdouni/"
+    }
+  ]
+}

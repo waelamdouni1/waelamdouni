@@ -1,0 +1,243 @@
+:root {
+  color-scheme: dark;
+
+  /* Dark only. Token names describe roles: ink = foreground, wall = page. */
+  --wall: oklch(14.5% 0 0);
+  --wall-deep: oklch(19% 0 0);
+  --paper: oklch(14.5% 0 0);
+  --ink: oklch(98% 0 0);
+  --ink-soft: oklch(98% 0 0 / 0.8);
+  --ink-muted: oklch(98% 0 0 / 0.6);
+  --hairline: oklch(100% 0 0 / 0.08);
+  --hairline-strong: oklch(100% 0 0 / 0.2);
+  --accent: oklch(98% 0 0);
+
+  /* Glass surfaces, as in the About card */
+  --glass: oklch(100% 0 0 / 0.045);
+  --glass-strong: oklch(100% 0 0 / 0.1);
+  --glass-hover: oklch(100% 0 0 / 0.18);
+  --glass-border: oklch(100% 0 0 / 0.08);
+  --scrim: oklch(12% 0 0 / 0.55);
+  --blur: blur(20px) saturate(140%);
+
+  --font-sans: var(--font-general), ui-sans-serif, system-ui, sans-serif;
+
+  --radius-card: 20px;
+  --gutter: clamp(16px, 2vw, 24px);
+  --gap: clamp(12px, 1.4vw, 20px);
+  --max: 1920px;
+  --header-h: 64px;
+
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
+
+  /* Stacking scale: sticky tabs, the open project panel, then the skip link. */
+  --z-header: 10;
+  --z-viewer: 20;
+  --z-skip-link: 30;
+
+  --duration-hover: 150ms;
+  --duration-reveal: 260ms;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  scrollbar-gutter: stable;
+  scroll-padding-top: calc(var(--header-h) + 56px);
+}
+
+html:has(dialog[open]) {
+  overflow: hidden;
+}
+
+body {
+  margin: 0;
+  background: var(--wall);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+h1,
+h2,
+h3,
+p,
+figure,
+dl,
+dd {
+  margin: 0;
+}
+
+h1,
+h2,
+h3 {
+  text-wrap: balance;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+img,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+a,
+button {
+  color: inherit;
+  -webkit-tap-highlight-color: transparent;
+}
+
+button {
+  font: inherit;
+}
+
+::selection {
+  background: oklch(100% 0 0 / 0.2);
+}
+
+:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.skip-link {
+  position: absolute;
+  left: var(--gutter);
+  top: 8px;
+  z-index: var(--z-skip-link);
+  padding: 8px 12px;
+  background: var(--ink);
+  color: var(--paper);
+  border-radius: 4px;
+  font-size: 14px;
+  transform: translateY(-150%);
+}
+
+.skip-link:focus-visible {
+  transform: none;
+}
+
+/* Inline text link: white with a faint underline that firms up on hover */
+.text-link {
+  color: var(--ink);
+  text-decoration: underline;
+  text-decoration-color: oklch(100% 0 0 / 0.3);
+  text-underline-offset: 2px;
+  transition: text-decoration-color var(--duration-hover) var(--ease-out);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .text-link:hover {
+    text-decoration-color: var(--ink);
+  }
+}
+
+/* Small muted metadata: type, year, field names */
+.label {
+  font-size: 13px;
+  line-height: 1.4;
+  color: var(--ink-muted);
+  font-variant-numeric: tabular-nums;
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  height: 40px;
+  padding: 0 16px;
+  border-radius: 999px;
+  border: 1px solid var(--hairline-strong);
+  background: transparent;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+  transition:
+    background-color var(--duration-hover) var(--ease-out),
+    border-color var(--duration-hover) var(--ease-out),
+    transform var(--duration-hover) var(--ease-out);
+}
+
+.btn:active {
+  transform: scale(0.96);
+}
+
+/* Trailing arrow: optical padding so the label doesn't look pushed left */
+.btn:not(.btn-icon):has(> [aria-hidden="true"]:last-child) {
+  padding-right: 14px;
+}
+
+.btn-primary {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: var(--paper);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .btn:hover {
+    background: var(--wall-deep);
+  }
+  .btn-primary:hover {
+    background: var(--ink-soft);
+    border-color: var(--ink-soft);
+  }
+}
+
+.btn-icon {
+  width: 40px;
+  padding: 0;
+  justify-content: center;
+}
+
+/* Touch screens get 44px targets */
+@media (pointer: coarse) {
+  .btn {
+    height: 44px;
+  }
+  .btn-icon {
+    width: 44px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+  html {
+    scroll-behavior: auto;
+  }
+}

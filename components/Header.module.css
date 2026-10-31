@@ -1,0 +1,97 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: var(--z-header);
+  background: var(--wall);
+  border-bottom: 1px solid var(--hairline);
+}
+
+.inner {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-areas:
+    "id actions"
+    "tabs tabs";
+  align-items: center;
+  column-gap: 24px;
+}
+
+.identity {
+  grid-area: id;
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  min-width: 0;
+  height: 56px;
+  align-self: center;
+  padding-top: 14px;
+  text-decoration: none;
+}
+
+.name {
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  white-space: nowrap;
+}
+
+.role {
+  font-size: 13px;
+  color: var(--ink-muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.tabs {
+  grid-area: tabs;
+  min-width: 0;
+}
+
+.contact {
+  grid-area: actions;
+  display: inline-flex;
+  align-items: center;
+  height: 44px;
+  font-size: 14px;
+  color: var(--ink);
+  text-decoration: underline;
+  text-decoration-color: var(--hairline-strong);
+  text-underline-offset: 4px;
+  transition: text-decoration-color var(--duration-hover) var(--ease-out);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .contact:hover {
+    text-decoration-color: currentColor;
+  }
+}
+
+@media (max-width: 420px) {
+  .role {
+    display: none;
+  }
+}
+
+@media (min-width: 1024px) {
+  .inner {
+    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+    grid-template-areas: "id tabs actions";
+    height: var(--header-h);
+  }
+  .identity {
+    height: auto;
+    padding-top: 0;
+  }
+  .contact {
+    justify-self: end;
+  }
+  .header:not([data-has-tabs]) .inner {
+    grid-template-columns: 1fr auto;
+    grid-template-areas: "id actions";
+  }
+}
